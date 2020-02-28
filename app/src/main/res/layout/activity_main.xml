@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hello_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/hello"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/name_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/label_padding25"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                style="@style/editTextMargin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/enter_name"
+                android:text=""
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/nickname_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nickname" />
+
+            <EditText
+                android:id="@+id/editNickname"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/enter_nickname"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/age_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/age" />
+
+            <EditText
+                android:id="@+id/editAge"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="@string/age"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/birthday_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/when_is_your_birthday" />
+
+            <EditText
+                android:id="@+id/editBirthday"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/enter_birthday"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/phoneNumber_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_phone_number" />
+
+            <EditText
+                android:id="@+id/editPhoneNumber"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="@string/enter_phone_number"
+                android:importantForAutofill="no"
+                />
+
+            <TextView
+                android:id="@+id/email_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/what_is_your_email_address" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="@string/enter_your_email_address"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/course_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/what_is_your_course" />
+
+            <EditText
+                android:id="@+id/editCourse"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/enter_course"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/dream_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/what_is_your_ultimate_dream" />
+
+            <EditText
+                android:id="@+id/editDream"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/enter_dream"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/crush_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/who_is_your_secret_crush" />
+
+            <EditText
+                android:id="@+id/editCrush"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/enter_name_of_crush"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/message_text"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:text="@string/what_is_your_message_for_me" />
+
+            <EditText
+                android:id="@+id/editMessage"
+                style="@style/editTextMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no"
+                android:labelFor="@id/editMessage"/>
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="#E91E63"
+                android:text="@string/done"
+                android:textColor="#FFFFFF" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='arches_exer4_SlamBook'

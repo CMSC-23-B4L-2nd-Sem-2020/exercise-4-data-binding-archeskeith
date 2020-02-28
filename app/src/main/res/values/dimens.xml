@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="label_padding">30dp</dimen>
+    <dimen name="label_padding25">25dp</dimen>
+    <dimen name="layout_editTexts">20dp</dimen>
+</resources>
