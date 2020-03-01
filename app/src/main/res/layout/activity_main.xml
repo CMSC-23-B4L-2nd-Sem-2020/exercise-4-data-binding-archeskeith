@@ -27,7 +27,32 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/hello"
                 android:textAlignment="center"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/name_answer"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/nickname_answer"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_slab"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/age_answer"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_slab"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/name_text"
@@ -69,6 +94,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/age" />
+
+            <TextView
+                android:id="@+id/thanks_answer"
+                style="@style/textViewMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_slab"
+                android:text="Thank you for answering!"
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/editAge"
