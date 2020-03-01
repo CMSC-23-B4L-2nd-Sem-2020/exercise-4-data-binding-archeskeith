@@ -16,11 +16,12 @@ import kotlinx.android.synthetic.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val myName: MyName = MyName("Name")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //       setContentView(R.layout.activity_main) -> replaced by the one below
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+        binding.myName = myName
 //      replace findViewByID<Button>(R.id.done_button) by the one below
         binding.doneButton.setOnClickListener {
             afterDoneButton()
@@ -99,9 +100,12 @@ class MainActivity : AppCompatActivity() {
             crushText.visibility = View.GONE
             messageText.visibility = View.GONE
 
-            nameAnswer.text = binding.editTextName.text.toString()
-            nicknameAnswer.text = binding.editNickname.text.toString()
-            ageAnswer.text = binding.editAge.text.toString()
+
+            myName?.name = editTextName.text.toString()
+            myName?.nickname = editNickname.text.toString()
+            myName?.age = editAge.text.toString()
+
+            invalidateAll()
 
             nameAnswer.visibility = View.VISIBLE
             nicknameAnswer.visibility = View.VISIBLE

@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name = "myName"
+            type="com.example.arches_exer4_slambook.MyName" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -40,7 +46,8 @@
                     android:fontFamily="sans-serif-medium"
                     android:textAlignment="center"
                     android:textSize="20sp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:text="@={myName.name}"/>
 
                 <TextView
                     android:id="@+id/nickname_answer"
@@ -50,7 +57,8 @@
                     android:fontFamily="@font/roboto_slab"
                     android:textAlignment="center"
                     android:textSize="20sp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:text="@={myName.nickname}"/>
 
                 <TextView
                     android:id="@+id/age_answer"
@@ -60,7 +68,8 @@
                     android:fontFamily="@font/roboto_slab"
                     android:textAlignment="center"
                     android:textSize="20sp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:text="@={myName.age}"/>
 
                 <TextView
                     android:id="@+id/name_text"
@@ -68,7 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/label_padding25"
-                    android:text="@string/name" />
+                    android:text="@={myName.name}" />
 
                 <EditText
                     android:id="@+id/editTextName"
@@ -84,7 +93,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/nickname" />
+                    android:text="@={myName.nickname}" />
 
                 <EditText
                     android:id="@+id/editNickname"
@@ -101,7 +110,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/age" />
+                    android:text="@={myName.age}" />
 
                 <TextView
                     android:id="@+id/thanks_answer"
@@ -129,7 +138,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/when_is_your_birthday" />
+                    android:text="@={myName.birthday}" />
 
                 <EditText
                     android:id="@+id/editBirthday"
@@ -146,7 +155,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/enter_phone_number" />
+                    android:text="@={myName.phone}" />
 
                 <EditText
                     android:id="@+id/editPhoneNumber"
@@ -163,7 +172,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/what_is_your_email_address" />
+                    android:text="@={myName.email}" />
 
                 <EditText
                     android:id="@+id/editEmail"
@@ -180,7 +189,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/what_is_your_course" />
+                    android:text="@={myName.course}" />
 
                 <EditText
                     android:id="@+id/editCourse"
@@ -197,7 +206,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/what_is_your_ultimate_dream" />
+                    android:text="@={myName.dream}" />
 
                 <EditText
                     android:id="@+id/editDream"
@@ -214,7 +223,7 @@
                     style="@style/textViewMargin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/who_is_your_secret_crush" />
+                    android:text="@={myName.crush}" />
 
                 <EditText
                     android:id="@+id/editCrush"
@@ -232,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:text="@string/what_is_your_message_for_me" />
+                    android:text="@={myName.message}" />
 
                 <EditText
                     android:id="@+id/editMessage"
