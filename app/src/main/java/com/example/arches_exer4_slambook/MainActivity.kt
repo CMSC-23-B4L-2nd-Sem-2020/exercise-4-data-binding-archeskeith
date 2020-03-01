@@ -1,10 +1,14 @@
 package com.example.arches_exer4_slambook
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import kotlinx.android.synthetic.*
 
 //import com.example.arches_exer4_slambook.databinding.ActivityMainBinding
 
@@ -13,11 +17,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        findViewById<Button>(R.id.done_button).setOnClickListener {
+            afterDoneButton(it)
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(it.windowToken, 0)
+        }
     }
 
     private fun afterDoneButton(view: View) {
+        val nameAnswer = findViewById<TextView>(R.id.name_answer)
+        val nicknameAnswer = findViewById<TextView>(R.id.nickname_answer)
+        val ageAnswer = findViewById<TextView>(R.id.age_answer)
+        val thanksAnswer = findViewById<TextView>(R.id.thanks_answer)
+        val button = findViewById<Button>(R.id.done_button)
+
 //      this pertains to those edit texts that are about to be gone when done button is clicked
-        val editTextName = findViewById <EditText>(R.id.editTextName)
+        val editTextName = findViewById<EditText>(R.id.editTextName)
         val editNickname = findViewById<EditText>(R.id.editNickname)
         val editAge = findViewById<EditText>(R.id.editAge)
         val editBirthday = findViewById<EditText>(R.id.editBirthday)
@@ -29,19 +44,50 @@ class MainActivity : AppCompatActivity() {
         val editMessage = findViewById<EditText>(R.id.editMessage)
 
 //      this pertains to those texts that are about to be gone when done button is clicked
-        val hello_text = findViewById<TextView>(R.id.hello_text)
-        val name_text = findViewById<TextView>(R.id.name_text)
-        val nickname_text = findViewById<TextView>(R.id.nickname_text)
-        val age_text = findViewById<TextView>(R.id.age_text)
-        val birthday_text = findViewById<TextView>(R.id.birthday_text)
-        val phoneNumber_text = findViewById<TextView>(R.id.phoneNumber_text)
-        val email_text = findViewById<TextView>(R.id.email_text)
-        val course_text = findViewById<TextView>(R.id.course_text)
-        val dream_text = findViewById<TextView>(R.id.dream_text)
-        val crush_text = findViewById<TextView>(R.id.crush_text)
-        val message_text = findViewById<TextView>(R.id.message_text)
+        val helloText = findViewById<TextView>(R.id.hello_text)
+        val nameText = findViewById<TextView>(R.id.name_text)
+        val nicknameText = findViewById<TextView>(R.id.nickname_text)
+        val ageText = findViewById<TextView>(R.id.age_text)
+        val birthdayText = findViewById<TextView>(R.id.birthday_text)
+        val phoneNumberText = findViewById<TextView>(R.id.phoneNumber_text)
+        val emailText = findViewById<TextView>(R.id.email_text)
+        val courseText = findViewById<TextView>(R.id.course_text)
+        val dreamText = findViewById<TextView>(R.id.dream_text)
+        val crushText = findViewById<TextView>(R.id.crush_text)
+        val messageText = findViewById<TextView>(R.id.message_text)
 
 //      this pertains to those texts that are about to be shown when all other contents changed visibility to gone
+        editTextName.visibility = View.GONE
+        editNickname.visibility = View.GONE
+        editAge.visibility = View.GONE
+        editBirthday.visibility = View.GONE
+        editPhoneNumber.visibility = View.GONE
+        editEmail.visibility = View.GONE
+        editCourse.visibility = View.GONE
+        editDream.visibility = View.GONE
+        editCrush.visibility = View.GONE
+        editMessage.visibility = View.GONE
+        helloText.visibility = View.GONE
+        nameText.visibility = View.GONE
+        nicknameText.visibility = View.GONE
+        ageText.visibility = View.GONE
+        birthdayText.visibility = View.GONE
+        phoneNumberText.visibility = View.GONE
+        emailText.visibility = View.GONE
+        courseText.visibility = View.GONE
+        dreamText.visibility = View.GONE
+        crushText.visibility = View.GONE
+        messageText.visibility = View.GONE
+
+        nameAnswer.text = editTextName.text
+        nicknameAnswer.text = editNickname.text
+        ageAnswer.text = editAge.text
+
+        nameAnswer.visibility = View.VISIBLE
+        nicknameAnswer.visibility = View.VISIBLE
+        ageAnswer.visibility = View.VISIBLE
+        thanksAnswer.visibility = View.VISIBLE
+        button.visibility = View.GONE
 
     }
 }
