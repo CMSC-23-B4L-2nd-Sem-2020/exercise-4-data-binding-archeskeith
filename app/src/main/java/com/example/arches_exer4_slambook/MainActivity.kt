@@ -8,23 +8,27 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.example.arches_exer4_slambook.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.*
 
 //import com.example.arches_exer4_slambook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    //    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+//       setContentView(R.layout.activity_main) -> replaced by the one below
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         findViewById<Button>(R.id.done_button).setOnClickListener {
-            afterDoneButton(it)
-            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            afterDoneButton()
+            val inputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(it.windowToken, 0)
         }
     }
 
-    private fun afterDoneButton(view: View) {
+    private fun afterDoneButton() {
         val nameAnswer = findViewById<TextView>(R.id.name_answer)
         val nicknameAnswer = findViewById<TextView>(R.id.nickname_answer)
         val ageAnswer = findViewById<TextView>(R.id.age_answer)
